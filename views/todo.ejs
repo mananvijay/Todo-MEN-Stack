@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>MEN TODO APP</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Cinzel&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/todo.css">
+    </head>
+    <body>
+        <div id="main">
+            <h1>TODO LIST APP</h1>
+            <!-- <hr> -->
+            <form action="/addtodo" method = "POST">
+                <table>
+                    <tr >
+                        <td colspan="2" id="drow"><label for="disc" class="lab" ><strong>DESCRIPTION</strong></label>
+                        <input type="text" name="des" id="disc"  placeholder="ENTER YOUR TASK HERE" required></td>
+                    </tr>
+                    <tr>
+                        <td id="catrow">
+                            <label for="cat" class="lab"><strong>CATEGORY</strong></label>
+                            <select name="category" id="cat" >
+                                <!-- <span>Select Category</span> -->
+                                <option value="Work">Work</option>
+                                <option value="Home">Home</option>
+                                <option value="Personal"><strong>Personal</strong></option>
+                            </select>
+                        </td>
+                        <td id="daterow">
+                            <label for="date" class="lab"><strong>DUE DATE</strong></label>
+                            <input type="date" name="date" id="date"  required>
+                        </td>
+                    </tr>
+                </table>
+                <div id="btns">
+                    <button  type="submit"> <i class="fas fa-plus"></i><strong> ADD TASK</strong></button>
+                    <!-- <a href="/delete/"><button id = "delete">DELETE TASK</button></a> -->
+                </div>
+            </form>
+
+            <% for(let i of tasks){ %>
+                <hr>
+                <div>
+                    <input type="checkbox" id="desL"><span id="toDs"><strong><%= i.des %></strong></span></input>
+                    <a href="/delete/?obj=<%= i._id%>" id="del"><i class="fas fa-minus-circle"></i></a>
+                </div>
+                    <p><span id="idate"><%= i.date %></span> <span id="icat"><%=i.category%></span></p>
+            <% } %>
+        </div>
+    </body>
+</html>

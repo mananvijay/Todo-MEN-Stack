@@ -1,0 +1,110 @@
+body{
+    background-color: #B5EAEA;
+}
+#main{
+    margin: auto;
+    margin-top: 2%;
+    width: 50%;
+    border: 2px black solid;
+    background-color: #EDF6E5;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #484538;
+}
+table{
+    margin: auto;
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.lab{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: 'Cinzel', serif;
+    color: #484538;
+}
+
+#cat, #date{
+    font-family: 'Cinzel', serif;
+    color: #484538;
+}
+
+input{
+    border: 0;
+}
+
+td{
+    padding: 1em;
+}
+#drow{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+#catrow, #daterow{
+    border-bottom: 1px solid grey;
+}
+#daterow{
+    border-left: 1px solid grey;
+}
+
+#disc{
+    width: 60%;
+}
+
+::placeholder{
+    word-spacing: 2em;
+    letter-spacing: 2px;
+    font-family: 'Bona Nova', serif;
+
+}
+
+#btns{
+    margin: auto;
+    width: 20%;
+    margin-top: 1em;
+    padding: 3px;
+}
+
+#btns button{
+    padding: 3px 20px 3px 20px;
+    font-family: 'Cinzel', serif;
+    background-color: #CAD49D;
+    border: 0;
+    color: #484538;
+}
+
+
+#del{
+    position: absolute;
+    right: 400px;
+    color: #484538;
+}
+
+#toDs{
+    position: relative;
+    /* display: block; */
+    /* width: 50%; */
+    left: 20px;
+    font-family: 'Bona Nova', serif;
+    color: #484538;
+}
+
+
+#icat{
+    position: absolute;
+    right: 400px; 
+    padding: 3px 8px 3px ;
+    background-color: #CAD49D;
+}
+
+#idate{
+    position: relative;
+    font-size: small;
+    left: 50px;
+    font-family: 'Bona Nova', serif;
+}
+
